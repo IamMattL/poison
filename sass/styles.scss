@@ -12,6 +12,7 @@ $light-grey: #F5F5F5;
 body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 100%;
+    font-weight: 300;
     color: $dark-blue;
 }
 
@@ -26,6 +27,18 @@ a {
 
 h1, h2, h3, h4 {
     margin: 0 0 .5em 0;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+small {
+    font-style: italic;
 }
 
 .site-header {
@@ -87,12 +100,28 @@ h1, h2, h3, h4 {
     flex: 1;
     background-color: $light-grey;
     padding: 1em;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin-bottom: 1em;
+        }
+    }
 }
 
 .latest {
     article {
         display: flex;
         margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid darken($light-grey, 10%);
+
+        &:last-of-type {
+            border-bottom: none;
+        }
 
         > a img {
             flex: 1;
@@ -105,11 +134,15 @@ h1, h2, h3, h4 {
         .content {
             flex: 2;
 
-            h3 {
-                img {
-                    margin-right: .5em;
-                    width: 20px;
-                    vertical-align: middle;
+            a:first-of-type {
+                color: $dark-blue;
+
+                h3 {
+                    img {
+                        margin-right: .5em;
+                        width: 20px;
+                        vertical-align: middle;
+                    }
                 }
             }
         }
@@ -117,9 +150,19 @@ h1, h2, h3, h4 {
 }
 
 .more-news {
+
+    h2 {
+        margin-top: 2em;
+    }
     article {
         display: flex;
         margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid darken($light-grey, 10%);
+
+        &:last-of-type {
+            border-bottom: none;
+        }
 
         > a img {
             flex: 1;
@@ -132,14 +175,31 @@ h1, h2, h3, h4 {
         .content {
             flex: 2;
 
-            h3 {
-                img {
-                    margin-right: .5em;
-                    width: 20px;
-                    vertical-align: middle;
+            a:first-of-type {
+                color: $dark-blue;
+
+                h3 {
+                    img {
+                        margin-right: .5em;
+                        width: 20px;
+                        vertical-align: middle;
+                    }
                 }
             }
         }
+    }
+}
+
+.scale-wrapper {
+    display: flex;
+    align-items: center;
+
+    .empty {
+        margin-right: .5em;
+    }
+
+    .full {
+        margin-left: .5em;
     }
 }
 

@@ -5,9 +5,9 @@ $(document).ready(function() {
             var title = newsItem.Title;
             var summary = newsItem.Summary;
             var url = newsItem.Url;
-            var published = newsItem.Published;
+            var published = newsItem.Published.substring(0,10);
             var score = newsItem.Score;
-            $('#legit-news').append('<article><a href="' + url + '"><img src="images/placeholder.png" alt="' + title + '" /></a><div class="content"><a href="' + url + '"><h3><img src="images/testtube-empty.svg">' + title + '</h3></a><p>' + summary + '</p></div></article>');
+            $('#legit-news').append('<article><a href="' + url + '"><img src="images/placeholder.png" alt="' + title + '" /></a><div class="content"><a href="' + url + '"><h3><img src="images/testtube-empty.svg">' + title + '</h3></a><p>' + summary + '</p><small>Published: ' + published + '</small></div></article>');
         });
     });
 
@@ -17,9 +17,9 @@ $(document).ready(function() {
             var title = newsItem.Title;
             var summary = newsItem.Summary;
             var url = newsItem.Url;
-            var published = newsItem.Published;
+            var published = newsItem.Published.substring(0,10);
             var score = newsItem.Score;
-            $('#legit-news').append('<article><a href="' + url + '"><img src="images/placeholder.png" alt="' + title + '" /></a><div class="content"><a href="' + url + '"><h3><img src="images/testtube-full.svg">' + title + '</h3></a><p>' + summary + '</p></div></article>');
+            $('#fake-news').append('<article><a href="' + url + '"><img src="images/placeholder.png" alt="' + title + '" /></a><div class="content"><a href="' + url + '"><h3><img src="images/testtube-full.svg">' + title + '</h3></a><p>' + summary + '</p><small>Published: ' + published + '</small></div></article>');
         });
     });
 });
