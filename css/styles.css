@@ -445,3 +445,14 @@ h1, h2, h3, h4 {
     height: auto; }
   .more-news article .content {
     flex: 2; }
+
+.scale {
+  background-color: gainsboro;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px; }
+  .scale .bar {
+    background-color: #C22222;
+    width: 75%;
+    height: 5px;
+    border-radius: 10px; }
