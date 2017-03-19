@@ -416,11 +416,11 @@ h1, h2, h3, h4 {
         color: #ffffff; }
 
 .container {
-  display: flex;
-  padding: 1.5em; }
+  display: flex; }
 
 .articles {
-  flex: 3; }
+  flex: 3;
+  padding: 1.5em; }
 
 .sidebar {
   flex: 1;
@@ -428,23 +428,36 @@ h1, h2, h3, h4 {
   padding: 1em; }
 
 .latest article {
-  display: flex; }
-  .latest article img {
-    flex: 1;
-    margin-right: 1em; }
-  .latest article .content {
-    flex: 2; }
-
-.more-news article {
-  display: flex; }
-  .more-news article img {
+  display: flex;
+  margin-bottom: 1em; }
+  .latest article > a img {
     flex: 1;
     margin-right: 1em;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
+    height: auto; }
+  .latest article .content {
+    flex: 2; }
+    .latest article .content h3 img {
+      margin-right: .5em;
+      width: 20px;
+      vertical-align: middle; }
+
+.more-news article {
+  display: flex;
+  margin-bottom: 1em; }
+  .more-news article > a img {
+    flex: 1;
+    margin-right: 1em;
+    width: 100%;
+    max-width: 250px;
     height: auto; }
   .more-news article .content {
     flex: 2; }
+    .more-news article .content h3 img {
+      margin-right: .5em;
+      width: 20px;
+      vertical-align: middle; }
 
 .scale {
   background-color: gainsboro;
