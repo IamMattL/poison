@@ -1,13 +1,10 @@
-
-
-
 function getDate() {
     var today = document.getElementById('today');
 
     var d = new Date();
 
     var weekday = new Array(7);
-    weekday[0] =  "Sunday";
+    weekday[0] = "Sunday";
     weekday[1] = "Monday";
     weekday[2] = "Tuesday";
     weekday[3] = "Wednesday";
@@ -34,9 +31,9 @@ function getDate() {
     today.innerHTML = n;
 }
 
-getDate(); 
+getDate();
 
 
 function english_ordinal_suffix(d) {
-    return d.getDate()+(d.getDate() % 10 == 1 && d.getDate() != 11 ? 'st' : (d.getDate() % 10 == 2 && d.getDate() != 12 ? 'nd' : (d.getDate() % 10 == 3 && d.getDate() != 13 ? 'rd' : 'th'))); 
+    return d.getDate() + (d.getDate() % 10 == 1 && d.getDate() != 11 ? 'st' : (d.getDate() % 10 == 2 && d.getDate() != 12 ? 'nd' : (d.getDate() % 10 == 3 && d.getDate() != 13 ? 'rd' : 'th')));
 }
